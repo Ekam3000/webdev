@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekam</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<style>
+    body{
+        margin:0px;
+        padding:0px;
+    }
+    .text-center{
+        text-align: center;
+    }
+    /* home  */
+#body-header{
+    background-image:url("home-office-1207834_1920.jpg");
+    height:75vh;
+    width:100%;
+    background-size:cover;
+    background-position:center;
+    opacity:0.8;
+    background-attachment: fixed;
+} 
+.navbar {
+}
+
+/* list-style:none can be placed at either under ul or under li */
+.navbar ul {
+ list-style: none;
+}
+.navbar li{
+    /* list-style: none;   */
+     /* border:2px solid rgb(170, 19, 19);   */
+      margin: 10px 14px;
+     display:inline-block;  
+}
+.navbar  a{
+          /* border: 2px solid pink;   */
+            text-decoration: none;
+            color: white;
+            font-size:20px;       
+}
+.navbar a:hover{
+    color:palegreen;
+    box-shadow: 0px 0px 6px 4px rgb(87, 248, 66);
+}
+.navbar a:visited{
+    color:rgb(93, 66, 248);
+}
+.navbar a:active{
+    color:rgb(19, 228, 243);
+}
+.social-icons ul {
+ list-style: none;
+}
+.social-icons li{
+      margin: 10px 14px;
+     display:inline-block;  
+}
+.social-icons  a{
+            text-decoration: none;
+            color: white;
+            font-size:20px;     
+}
+.social-icons a:hover{
+    color:palegreen;
+}
+.social-icons a:visited{
+    color:rgb(93, 66, 248);
+}
+ .social-icons a:active{
+    color:rgb(19, 228, 243);
+} 
+ .social-icons i{
+     /* border-radius: 50%;   */
+    margin-top:10px;
+}
+.social-icons i:hover{
+    box-shadow: 0px 0px 6px 4px rgb(87, 248, 66);
+}  
+
+h1{
+    color:teal;
+} 
+.heading h1{
+    color:rgb(93, 66, 248);
+}
+.heading h1:hover{
+    color:rgb(19, 228, 243);
+}
+
+/* about sections  */
+
+section{
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    /* with the addition of align-items:center; , no need of margin auto in the swection-heading class  */
+    align-items:center; 
+}
+section:nth-child(2n){
+    background-color: white;
+}
+section:nth-child(2n+1){
+    background-color:lightgrey;
+}
+/* new */
+section:target{
+    background-color:cyan;
+}
+.section-heading{
+ width:auto;
+ margin:-1px;
+ /* margin:10px auto; */
+ padding:20px 10px 10px;
+ font-weight:400;
+}
+.section-heading span{
+    /* border:2px solid red;  */
+    color:red;
+    padding-top:10px;
+    margin-right:.5rem;
+}
+.section-heading span:hover{
+    color:rgb(19, 228, 243);;
+}
+/* visited will not word under this as it is not anchor tag  */
+/* .section-heading span:visited{
+    color:rgb(93, 66, 248);
+} */
+.section-heading span:active{
+    color:rgb(19, 228, 243);
+}
+
+/* about  */
+
+#about{
+    height:auto;
+    width:100%;
+    /* we have set position of about section as relitive,so it will place relative to its original position. when about section is placed relative to it. it will appear over other image  */
+    position:relative;
+}
+
+#my-img{
+    height:12rem;
+    width:12rem;
+    margin:auto;
+}
+#my-img img{
+    height:100%;
+    width:100%;
+    border-radius:50%;
+    margin-top:-50%;
+}
+#para{
+    height:auto;
+    width:50%;
+    margin:auto;
+    /* overflow-wrap:break-word;  */
+    
+}
+ /* skills  */
+  
+.skills-display{
+    width:70%;
+    height:450px;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+.skill-progress{
+    background-color: grey;
+    height:1.3rem;
+    width:30rem;
+    border-radius:0.8rem;
+}
+.skill-progress-I{
+    background-color: blue;
+    width:85%; 
+    height:1.3rem; 
+    padding-left:5px;
+    border-radius:0.8rem;
+}
+.skill-progress-II{
+    background-color:coral;
+    width:45%; 
+    height:1.3rem; 
+    padding-left:5px;
+    border-radius:0.8rem;
+}
+.skill-progress-III{
+    background-color:crimson;
+    width:30%; 
+    height:1.3rem; 
+    padding-left:5px;
+    border-radius:0.8rem;
+}
+.skill-progress-IV{
+    background-color:darkorange;
+    width:50%; 
+    height:1.3rem; 
+    padding-left:5px;
+    border-radius:0.8rem;
+}
+.skill-progress-V{
+    background-color:teal;
+    width:90%; 
+    height:1.3rem; 
+    padding-left:5px;
+    border-radius:0.8rem;
+}
+.skill-progress-VI{
+    background-color:plum;
+    width:70%; 
+    height:1.3rem; 
+    padding-left:5px;
+    border-radius:0.8rem;
+}
+.skill-progress-VII{
+    background-color:turquoise;
+    width:60%; 
+    height:1.3rem; 
+    padding-left:5px;
+    border-radius:0.8rem;
+}
+.skill-progress-I span:hover{
+    color:palegreen;
+}
+/* visited will not word under this as it is not anchor tag  */
+/* .section-heading span:visited{
+    color:rgb(93, 66, 248);
+} */
+ .skill-progress-I  span:active{
+    color:rgb(19, 228, 243);
+} 
+.skill-name{
+    color:white;
+    font-size:1rem;
+}
+
+/* contact  */
+
+#contact{
+    width:100%;
+    height:auto;
+/* border: 2px solid red;  */
+background-image:linear-gradient(to top right ,blue, purple);
+}
+.contact-section{
+    width:90%;
+    height:auto;
+     /* border: 2px solid red;  */
+     display:flex;
+     flex-wrap:wrap;
+     justify-content: space-evenly;
+  
+}
+.contact-detail{
+color:teal;
+margin-top:50px;
+height:auto;
+width:400px;
+/* border:2px solid red;*/
+}
+.contact-detail form div:hover{
+   color: rgb(19, 228, 243);
+}
+.address{
+    margin-top:50px;
+    width:500px;
+    height:auto;
+    flex-direction:column;
+    /* border:2px solid red;  */
+
+}
+.social-icons-i{
+    color:rgb(93, 66, 248);
+}
+.social-icons-i i:hover{
+    color:palegreen;
+}
+.social-icons-i i:visited{
+    color:rgb(93, 66, 248);
+}
+ .social-icons-i :active{
+    color:rgb(19, 228, 243);
+} 
+ .social-icons-i i{
+    border-radius: 50%;   
+    margin-top:10px;
+}
+.social-icons-i i:hover{
+    box-shadow: 0px 0px 6px 4px rgb(87, 248, 66);
+}  
+.address h1:hover{
+    color:rgb(19, 228, 243);
+}
+form input{
+    background-image:linear-gradient(to top right ,blue, purple);
+
+    color:red;
+}
+form textarea{
+    background-image:linear-gradient(to top right ,blue, purple);
+    color:red;
+}
+form button{
+    background-image:linear-gradient(to top right ,blue, purple);
+}
+
+/* portfolio  */
+
+.portfolio{
+    width:70%;
+    height:auto;
+    /* border: 2px solid red;  */
+    display: flex;
+    flex-wrap:wrap; 
+    justify-content:space-evenly;
+     padding:40px; 
+}
+.portfolio a:hover{
+    height:auto;
+    width:300px;
+    box-shadow: 0px 0px 6px 4px rgb(87, 248, 66);
+} 
+
+ /* work experience and education  */
+.timeline{
+     height:auto;
+    width:75%;
+     position:relative; 
+    /* border: 2px solid red;  */
+}
+.timeline-box{
+    /* 75% ka 40% leliya 75% is 100% for us  */
+    width:40%;
+   height:auto;
+    position:relative;
+    left:5%;
+    /* border:2px solid red;  */
+}
+.timeline-box:nth-child(2n){
+    left: 53%;
+}
+ .span{
+    color:rgb(93, 66, 248);
+}
+.span:hover{
+    color:rgb(19, 228, 243);
+}
+.timeline-box:nth-child(2n+1)::after{
+    /* w.r.t parent(timeline-box content) and we will now be deciding where we want to place( not after the content), but with our own wish.*/
+    content:'';
+    position:absolute;
+    border-radius: 50%;
+    width:.5rem;
+    right:-14%;
+    /* this 13% is w.r.t the parent timeline-boxes */
+    height:.5rem;
+    background-color:grey;
+    /* since no content is there initially in timeline-box so the dots will be at the top-left corner of the boxes  */
+    top:43%;
+    z-index:1;
+}
+.timeline-box:nth-child(2n)::after{
+    content:'';
+    position:absolute;
+    border-radius: 50%;
+    width:.5rem;
+    left:-8%;
+    height:.5rem;
+    background-color:grey;
+    top:43%;
+    z-index:1;
+}
+
+.timeline-divider{
+ /* w.r.t parent karna hai iss liye absolute */
+     position:absolute; 
+    left:50%;
+    width:0;
+    height:80%;
+    border: 2px solid #1cbd8d6b;
+    top:10%;
+}
+
+@media screen and (max-width:768px){
+ /* obi the 768px is w.r.t the screen size */
+    .timeline-divider{
+       left:5%;
+    }
+    .timeline-box{
+        left:12%;
+        width:80%;
+    }
+    .timeline-box:nth-child(2n){
+     left: 12%; 
+}
+   /* or */
+    /* .timeline-box{
+        left:12% !important;
+        width:80%;
+    } */
+    /* .timeline-box:nth-child(2n+1)::after{
+        left:-10%;
+    }
+    .timeline-box:nth-child(2n)::after{
+        left:-10%
+    } */
+     /* or  */
+     .timeline-box::after{
+         left:-10% !important;
+     }
+}
+.timeline-traveller{
+    position:sticky;
+    top:20%;
+    transform:rotate(90deg);
+    color:rgb(93, 66, 248);
+}
+.timeline-traveller i:hover{
+    color:rgb(19, 228, 243);
+}
+html{
+    font-size: 15px;
+}
+
+
+</style>
+<body>
+    <header id="body-header" class= "text-center">
+        <nav class="navbar">
+            <ul id="id1">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SKILL</a></li>
+                <li><a href="#">WORK EXPERIENCE</a></li>
+                <li><a href="#">EDUCATION</a></li>
+                <li><a href="#">PORTFOLIO</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="text-center heading">
+            <h1>
+                All About Ekam
+            </h1>
+        </div>
+        <div class="social-icons" >
+            <ul>
+            <li>
+                <a href="#" ><i class="fab fa-instagram fa-2x "></i></a>
+            </li>
+            <li>
+                <a href="#" ><i class="fab fa-whatsapp fa-2x"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fab fa-linkedin fa-2x "></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fab fa-github fa-2x"></i></a>
+            </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section id="about" class="text-center">
+            <div id="my-img">
+                <!-- <img src="./img/IMG_20210522_161955_093.jpg" alt=""> -->
+                <img src="IMG_20210522_161955_093.jpg" alt="">
+            </div>
+            <p id="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, quos nemo. Suscipit minima alias officia repellendus iste! Distinctio nihil saepe odit error soluta quam at natus accusantium reprehenderit voluptatibus, quasi eaque deleniti reiciendis corporis id quisquam facere inventore neque modi, consectetur eveniet exercitationem iure quo? Tempora eligendi explicabo recusandae modi!</p>
+        </section>
+        <section id="skills">
+
+              <h1 class="section-heading">
+              <span>
+                <i class="fas fa-address-card"></i>
+              </span>
+              <span>SKILLS</span>
+             </h1>
+
+            <div class="skills-display">
+             <div class="skill-progress">
+                 <div class="skill-progress-I">
+                    <div class="skill-name">
+                        <span>c++</span>
+                    </div>
+                 </div>
+             </div>
+             <div class="skill-progress">
+                 <div class="skill-progress-II">
+                    <div class="skill-name">
+                        <span>web dev</span>
+                    </div>
+                 </div>
+             </div>
+             <div class="skill-progress">
+                 <div class="skill-progress-III">
+                    <div class="skill-name">
+                        <span>java</span>
+                    </div>
+                 </div>
+             </div>
+             <div class="skill-progress">
+                 <div class="skill-progress-IV">
+                    <div class="skill-name">
+                        <span>python</span>
+                    </div>
+                 </div>
+             </div>
+             <div class="skill-progress">
+                 <div class="skill-progress-V">
+                    <div class="skill-name">
+                        <span>event management</span>
+                    </div>
+                 </div>
+             </div>
+             <div class="skill-progress">
+                 <div class="skill-progress-VI">
+                    <div class="skill-name">
+                        <span>data structure and algo</span>
+                    </div>
+                 </div>
+             </div>
+             <div class="skill-progress">
+                 <div class="skill-progress-VII">
+                    <div class="skill-name">
+                        <span>ML</span>
+                    </div>
+                 </div>
+             </div> 
+            </div>
+        </section>
+        <section id="work-experience">
+            <h1 class="section-heading">
+                <span>
+                  <i class="fas fa-address-card"></i>
+                </span>
+                <span> WORK EXPERIENCE</span>
+                </h1>
+                <div class="timeline text-center">
+                    <div class="timeline-box">
+                     <span class="span">
+                         COE
+                     </span> <br>
+                     <span class="span">
+                         TIET
+                     </span> <br>
+                    <span class="span">
+                        AUGUST 2020-JULY 2024
+                    </span> <br>
+                        <span>
+                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, inventore quasi. Quam ipsa corrupti velit.
+                    </span>
+                    </div>
+                    <div class="timeline-box">
+                        <span class="span">
+                            COE
+                        </span> <br>
+                        <span class="span">
+                            TIET
+                        </span> <br>
+                       <span class="span">
+                           AUGUST 2020-JULY 2024
+                       </span> <br>
+                           <span>
+                           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate blanditiis ut corrupti itaque dolorem exercitationem!
+                       </span>
+                    </div>
+                    <div class="timeline-box">
+                        <span class="span">
+                            COE
+                        </span> <br>
+                        <span class="span">
+                            TIET
+                        </span> <br>
+                       <span class="span">
+                           AUGUST 2020-JULY 2024
+                       </span> <br>
+                           <span>
+                               Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique recusandae sapiente quaerat nam. Tenetur, ea.
+                       </span>
+                    </div>
+                    <div class="timeline-box">
+                        <span class="span">
+                            COE
+                        </span> <br>
+                        <span class="span">
+                            TIET
+                        </span> <br>
+                       <span class="span">
+                           AUGUST 2020-JULY 2024
+                       </span> <br>
+                           <span>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi temporibus expedita quisquam cum voluptate cupiditate.
+                       </span>
+                    </div>
+                    <div class="timeline-divider">
+                        <div class="timeline-traveller">
+                            <i class="fas fa-plane"></i> 
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section id="education">
+            <h1 class="section-heading">
+                <span>
+                  <i class="fas fa-address-card"></i>
+                </span>
+                <span>EDUCATION</span>
+                </h1>
+                <div class="timeline text-center">
+                    <div class="timeline-box">
+                        <span class="span">
+                            BE
+                        </span> <br>
+                        <span class="span">
+                            TIET
+                        </span> <br>
+                       <span class="span">
+                           AUGUST 2020-JULY 2024
+                       </span> <br>
+                           <span>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi temporibus expedita quisquam cum voluptate cupiditate.
+                       </span>
+                    </div>
+                    <div class="timeline-box">
+                        <span class="span">
+                            BE
+                        </span> <br>
+                        <span class="span">
+                            TIET
+                        </span> <br>
+                       <span class="span">
+                           AUGUST 2020-JULY 2024
+                       </span> <br>
+                           <span>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi temporibus expedita quisquam cum voluptate cupiditate.
+                       </span>
+                    </div>
+                    <div class="timeline-box">
+                        <span class="span">
+                            BE
+                        </span> <br>
+                        <span class="span">
+                            TIET
+                        </span> <br>
+                       <span class="span">
+                           AUGUST 2020-JULY 2024
+                       </span> <br>
+                           <span>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi temporibus expedita quisquam cum voluptate cupiditate.
+                       </span>
+                    </div>
+                    <div class="timeline-box">
+                        <span class="span">
+                            BE
+                        </span> <br>
+                        <span class="span">
+                            TIET
+                        </span> <br>
+                       <span class="span">
+                           AUGUST 2020-JULY 2024
+                       </span> <br>
+                           <span>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi temporibus expedita quisquam cum voluptate cupiditate.
+                       </span>
+                    </div>
+                    <div class="timeline-divider">
+                        <div class="timeline-traveller">
+                            <i class="fas fa-plane"></i> 
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section id="portfolio">
+            <h1 class="section-heading">
+                <span>
+                  <i class="fas fa-address-card"></i>
+                </span>
+                <span>PORTFOLIO</span>
+                </h1>
+               <div class="portfolio">
+                   <a href="#">
+                       <img src="notes.jpg" height="150px" width="300px"alt="">
+                   </a>
+                   <a href="#">
+                       <img src="projects (1).jpg" height="150px" width="300px"alt="">
+                   </a>
+                   <a href="#">
+                       <img src="steps.jpg" height="150px" width="300px"alt="">
+                   </a>
+                   <a href="#">
+                       <img src="goals.jpg" height="150px" width="300px"alt="">
+                   </a>
+                   <a href="#">
+                       <img src="earnings.jpg" height="150px" width="300px"alt="">
+                   </a>
+                   <a href="#">
+                       <img src="language.png" height="150px" width="300px"alt="">
+                   </a>
+               </div>
+
+
+        </section>
+        <section id="contact">
+                <h1 class="section-heading">
+                <span>
+                  <i class="fas fa-address-card"></i>
+                </span>
+                <span>CONTACT</span>
+               </h1>
+            <div class="contact-section">
+               <div class="contact-detail text-center">
+                   <form action="noaction.php">
+                       <div >
+                        NAME: <br>  <input type="text">
+                       </div>
+                       <div >
+                        YOUR EMAIL: <br>  <input type="text">
+                       </div>
+                       <div>
+                        MESSAGE: <br>
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                       </div>
+                       <button type="submit" >SEND MESSAGE </button>
+                   </form>
+               </div>
+             <div class="address social-icons-i">
+                 <h1>
+                     Get In Touch
+                 </h1>
+                 <p>
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum tempora vitae quibusdam neque ipsam a iusto, est corporis maiores, excepturi voluptatum! Animi error unde fugit.
+                 </p>
+                 <h1>
+                     My Address
+                 </h1>
+                 <div class="social-icons-i">
+                    <i class="fas fa-map-marker-alt"></i> Ludhiana,India
+                 </div>
+                 <div>
+                    <i class="fas fa-envelope"></i> ekambhelle030@thapar.edu
+                 </div>
+                 <div>
+                    <i class="fas fa-mobile"></i> 7837513103
+                 </div>
+             </div>
+         </div>
+             <div class="social-icons">
+                <ul>
+                <li>
+                    <a href="#"><i class="fab fa-instagram fa-2x "></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fab fa-whatsapp fa-2x "></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fab fa-linkedin fa-2x "></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fab fa-github fa-2x "></i></a>
+                </li>
+                </ul>
+            </div> 
+        </section>
+    </main>
+</body>
+</html>
+<!-- '572px' and '768px'. -->

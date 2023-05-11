@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexbox Tutorial</title>
+    <style>
+        .container{
+            height: 544px; 
+            width: 100%;
+            border: 2px solid black;
+               display: flex; 
+               /* Initialize the container as a flex box and then the item becomes flex items.  now we can apply flex properties*/
+               /* also the flex properties are overwritable (the one which is written later gots preority) */
+         /* flex-direction: row; */
+               /* (Default value of flex-direction is row)  */
+            /* /* flex-direction: column;  */
+            /* flex-direction: row-reverse; */
+            /* flex-direction:column-reverse;  */
+
+            /* significance of flex wrap-> 
+             we set the width of the items container as 200px but actually their contentbox width is not 200px . the more the items boxes we will place inside the container boxes the more they will get shrink and reduces their width. so FLEX -WRAP is here to anti that. and the item box element will be placed in multiple lines but with their accurate width as mentioned.
+             BUT in this case some boxes will go out of the container from vertical side in that case put the container height to auto */
+
+              /* flex-wrap: wrap;  */
+             /* (Default value of flex-wrap is no-wrap) */
+            /* flex-wrap: wrap-reverse; */
+
+            /* This is a shorthand for flex-direction: and flex-wrap: ; */
+            /* flex-flow: row-reverse wrap; */ 
+
+            /* justify-content will justify the content in horizontal direction (cross axis in case flex-direction:row) 
+            and if flex-direction:column then justify-content will justify the content in vertical direction*/
+                /* flex-start IS THE DEFAULT VALUE FOR JUSTIFY CONTENT  */
+             /* justify-content: center;  */
+             /* equal space b/w the elements  */
+             /* justify-content: space-between;  */
+             /* justify-content:flex-end;  */
+               /* equal space from both sides for all elements (space around) */
+             /* justify-content: space-around; */
+             /* justify-content: space-evenly; */
+            
+            /* align-items will justify the content in vertical direction (cross axis in case flex-direction:row) 
+            and if flex-direction:column then align-items will will justify the content in horizontal direction */
+            /* align-items: center; */
+            /* align-items: flex-end; */
+            /* align-items: flex-start; */
+            /* ALIGNING ALL THE ITEMS IN THE SAME HORIZONTAL LEVEL (base-line) */
+            /* align-items: base-line; */
+            /* (default value is stretch). what stretch will do is to stretch the items over whole height only if height of items boxes are not mentioned or is auto.. AND ALSO MAX HEIGHT IS USED TO RESTRICT THEIR SHRINKING */
+             /* align-items: stretch;   */
+            /* this last {align-item:stretch}is useable when flex-wrap:wrap is also on.;  */
+        }
+        .item{
+            width: 200px;
+            height: 200px; 
+            background-color: tomato;
+            border: 2px solid green;
+            margin: 10px;
+             padding: 3px;  
+        }
+        
+        #item-1 {
+            /* Flex properties for a flex item */
+            /* Higher the order, later it shows up in the container. also we can set -ve values foe order. DEFAULT VALUE OF ORDER IS ZERO*/
+            /* order: 2; */
+            /* flex-grow is used to use the remaining same available in row and column . the values of flex grow for different items is used give the proportionality of remaining space  to the items. two item with equal value of flex-grow will get equal space.FLEX GROW PROPERTY WORKS IF CERTAIN SPACE REMAINS. */
+              flex-grow: 2; 
+             /* -ve numbers are not allowed in flex grow  */
+             /* FLEX SHRINK PROPERTY IS USED WHEN THEIR IS LIMITED SPACE AVAILABLE FOR THE ITEMS ELEMENTS  ex-suppose two items elements are there with width 200px each and total width of the container is 300px then initially 150 px to each item and then then u can apply flex shrink acc to ur requirement .*/
+            /* flex-shrink: 2;  */
+
+        }
+        #item-2{
+            /* flex-grow: 3;
+            flex-shrink: 3 ; */
+            flex-basis: 160px;
+            /* when flex-direction is set to row flex-basis: will control width */
+            /* when flex-direction is set to column flex-basis: will control height */
+        }
+        #item-3{
+            /* flex:flex grow flex shrink flex basis  */
+            /* flex: 2 2 230px; */
+            align-self: flex-start;
+            align-self: flex-end;
+            align-self: center;
+
+            }
+        
+    </style>
+</head>
+<body>
+    <h1>This is Flexbox Tutorial</h1>
+    <div class="container">
+        <div class="item" id="item-1">First Box</div>
+        <div class="item" id="item-2">Second Box</div>
+        <div class="item" id="item-3">Third Box</div>
+         <!-- <div class="item" id="item-4">Fourth Box</div>
+        <div class="item" id="item-5">Fifth Box</div>
+        <div class="item" id="item-6">Sixth Box</div> -->
+    </div>
+</body>
+</html>

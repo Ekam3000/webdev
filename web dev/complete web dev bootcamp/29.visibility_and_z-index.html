@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility And Z-Index</title>
+    <style>
+        .box{
+            height:170px;
+            width:170px;
+            border:2px solid rgb(0, 195, 255);
+         }
+         /* Note: Z-index does not work on static position value. It only works on the elements with position: relative, absolute, fixed, or sticky.   */
+         #box1{
+            background-color: rgb(20, 55, 158);
+            top: 69px;
+            position: relative;
+            z-index:12;
+         }
+         #box2{
+            background-color:yellow;
+            top: 34px;
+            position: relative; 
+            z-index: 17;
+         }
+         #box3{
+            background-color:skyblue;
+             /* display:none; - It completely removes an HTML tag from the web page like it was never there.
+             visibility:hidden;  - It makes the tag invisible but will not remove the element, and it will still occupy the space on the page. */
+
+              display:none;  
+             /* visibility:hidden;*/
+         }
+         #box4{
+            background-color:purple;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+</body>
+</html>

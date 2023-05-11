@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Properties</title>
+    <style>
+    #div1{
+        background-color: red;
+        height:200px;
+        width:100px;
+        /* display:inline;  */
+         display:inline-block;  
+
+    }
+    #div2{
+        background-color: blue;
+        height:200px;
+        width:100px;
+        /* display:inline;  */
+         display:inline-block;  
+         margin-left:-4px;
+    }
+    span{
+        display:block; 
+    }
+    </style>
+</head>
+<body>
+    <span>
+        i am span 1
+    </span>
+    <span>
+        i am span 2
+    </span>
+    <div id="div1">
+        abdc
+    </div>
+    <div id="div2">
+        efgh
+    </div>
+</body>
+</html>
+  <!-- now we can see that the div are the block elements . now if we make the div elements as the inline elements then their height and width will become zero.. so from here we can say that we cannnot set the height and width for the inline elements. so as div"s are now the inline elements so they will only takes up the required space . the height and width which we set for them will not work. 
+  infact you cannot give them vertical margins and paddings as well. -->
+  <!-- Now what i want is that the two div's that are visible should appear inline but i can control its height, width, vertical margins and paddings.  -->
+  <!-- now when u have make the two div's inline-block you can see that their is some x margin abt 4px b/w them.is is bcoz of the word inline (in thew inline-block){consider two words or sentences which are inline u can see that their is always some gap b/w them. same is the cazse now takes place b/w the div elements}
+  now to avoid the spacing b/w them , give them -ve margin  -->

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d cube</title>
+    <style>
+        .cube{
+            height:200px;
+            width: 200px;
+            position:relative;
+            margin:100px;
+            /* to preserve the 3d-effect  */
+            transform-style:preserve-3d;
+            /* perspective meaning how deep the object it is when we are viewing it */
+            perspective:1000px;
+            transform:rotatex(-30deg) rotatey(40deg); 
+             transition:all 1s; 
+        }
+        .face{
+            height:100%;
+            width: 100%;
+            position:absolute;
+            /* so it is relative w.r.t to cube  */
+            top:20%;
+            left:20%;
+
+        }
+        .one{
+            background-color: skyblue;
+    
+        }
+        .two{
+         background-color:lightcoral;
+          transform:rotateY(90DEG) translateZ(-100px) translatex(-100px)
+         /* when we are rotating the cube along Y axis ,the X & Y directions change accordingly xaxis takes place of zaxis and zaxis takes place of xaxis */
+        }
+        .three{
+            background-color:gold;
+            transform: rotateY(90deg) translatez(100px) translate(-100px);
+        }
+        .four{
+            background-color:fuchsia;
+            transform: rotatex(90deg) translatez(100px) translatey(100px);
+        }
+        .five{
+            background-color:blue;
+            transform: rotateX(0deg) translateZ(200px);
+        }
+        .six{
+            background-color:darkseagreen;
+            transform: rotatex(90deg) translateZ(-100px) translatey(100px);
+        
+         } 
+        .cube:hover{
+            transform: rotatez(360deg);
+            transform: rotatex(360deg);
+            transform: rotatey(360deg);
+
+        }  
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="face one">
+        </div>
+        <div class="face two">
+        </div>
+         <div class="face three">
+        </div>
+        <div class="face four">
+        </div>
+        <div class="face five">
+        </div>
+        <div class="face six">
+        </div> 
+    </div>
+</body>
+</html>

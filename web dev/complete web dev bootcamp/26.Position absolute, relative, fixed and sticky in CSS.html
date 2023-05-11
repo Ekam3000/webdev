@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            background-color: khaki;
+            height: 3444px;
+            position:relative;
+        }
+        /* CSS Position: static (default), relative, absolute, fixed, sticky */
+    .box{
+        /* display: inline-block help us to make and element inline and bcoz it makes the elements inline all the four boxes will come in a single line. and also we can change the height and width.  */
+         display: inline-block;   
+        
+         /* or  */
+         /* float :left;   */
+        border: 2px solid red;
+        width: 150px;
+        height: 150px;
+        margin: 2px;
+    }
+    #box3{
+        /* relative: Positions the element relative to its normal positon and will leave a gap at its normal position. in relitive positioning the area covered by the box3 initially will be blocked and secured */
+        /* position: absolute; */
+        
+        /* absolute: Positions the element relative to the positon of its first relitively positoned parent (container) and also no space will be reserved/secured for this absolutly positioned box. */
+        /* position: absolute;  */
+
+        /* top: 34px; */
+        /* left: 134px;  */
+
+        /* fixed: Positions the element relative to the browser window or viewer view */
+        /* position: fixed;
+        top: 4px;
+        left: 2px ; */
+
+        /* sticky: Positions the element relative to the users scroll position and it behaves like fixed until u scrolled the entire parent box.*/
+        position: sticky;  
+         top: 3px;  
+
+
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">Chat with us</div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+</html>

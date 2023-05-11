@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="complete web dev bootcamp/favicon.ico" type="image/x-icon">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="making an html form">
+    <meta name="keywords" content="html, coding, css">
+    <meta name="author" content="ekam">
+
+    <title>Forms</title>
+</head>
+
+<body>
+    <h3> <a href="./11.blog categories.html">HOME</a></h3>
+
+    <h2>This is HTML forms tutorial</h2>
+
+    <!-- in action we can fill out backend.php if it is present -->
+    <form action="" method="post">
+        <!-- lable for "" , the name which we write under these brackets will be used to recognise the particular input type which have the same name(called id) -->
+        <!-- the benefit of writing 'Name:' inside the label line is that when we click on the Name: word in html page then the box under Name: will be selected  -->
+        <label for="name"> Name: </label>
+        <div>
+            <input type="text" name="myName" id="name" required>
+        </div>
+        <br>
+        <!-- <audio src="./audio.mp3" controls></audio>  -->
+        <!-- but browser does not recognise all audio format so in case u have multiple auddio formats then -->
+        <!-- this will autoply the audio  -->
+        <!-- <audio  controls autoplay> -->
+        <audio controls>
+            <source src="./audio.ogg" type="audio/ogg">
+            <!-- if present in different folder then two dots  -->
+            <!-- <source src="../" type="">  -->
+        </audio> <br>
+        <video height="200" width="200" controls>
+            <source src="./video.mp4" type="video/mp4">
+            Browser does not support this video format
+        </video>
+        <br>
+        <!-- for the u tube online video  -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RwX0uyfV8Cs" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        <br>
+        <figure>
+            <img src="./LOGO-05.png" height="200" width="200" alt="">
+            <figcaption> logo image</figcaption>
+
+        </figure>
+
+        <div>
+
+            Role: <br> <input type="text" name="myRole">
+        </div>
+
+        <div>
+            Email: <input type="email" name="myEmail" required placeholder="abc@gmail.com">
+        </div>
+
+
+        <div>
+            Date: <input type="date" name="myDate">
+        </div>
+        <br>
+        <div>
+            Country: <input type="country" name="mycountry" value="india" disabled>
+        </div>
+        <br>
+        <div>
+            URL: <input type="url" name="myurl">
+        </div>
+        <br>
+        <div>
+            Bonus: <input type="number" name="myBonus">
+        </div>
+        <br>
+        <div>
+            range b/t u and coding: <input type="range" name="myrange" min="10" max="50" step="10">
+        </div>
+        <br>
+        <div>
+            <!-- if u have write checked already then by default ur checkbox is cheched in the html form  -->
+            Are you eligible?: <input type="checkbox" name="myEligibility" checked>
+        </div>
+        <br>
+        <div>
+            <label for="username">Username:</label> <br>
+            <input type="text" name="myusername" id="username" required>
+        </div>
+        <div>
+            <label for="password"></label> <br>
+            password: <input type="password" name="mypassword" id="password" required>
+        </div>
+        <div>
+            Gender: Male <input type="radio" name="myGender" value="male" checked> Female <input type="radio"
+                name="myGender" value="female">
+            Other <input type="radio" name="myGender" value="other">
+        </div>
+
+        <br>
+        <div>
+            Write about yourself: <br><textarea name="myText" cols="90" rows="10"></textarea>
+        </div>
+
+        <br>
+        <div>
+            <!-- to select multiple press ctrl in your keyboard -->
+            <!-- drop down list  -->
+            <label for="car">Car</label>
+            <select name="myCar" multiple id="car">
+                <option value="ind">Indica</option>
+                <option value="swf" selected>Swift</option>
+            </select>
+        </div>
+        <br>
+        <!-- <optgroup> tag -->
+        <label for="cars">Choose a car:</label>
+        <select name="cars" id="cars">
+            <optgroup label="Swedish Cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+            </optgroup>
+            <optgroup label="German Cars">
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </optgroup>
+        </select>
+        <p>Select one option from drop-down list:</p>
+
+
+        <select>
+            <option value="GFG">GFG</option>
+            <option value="OS">OS</option>
+            <option value="DBMS">DBMS</option>
+            <option value="Data Structure">
+                Data Structure
+            </option>
+        </select>
+
+        <div>
+
+            <!-- for giving a value to these bottons ,we will provide value attribute for it -->
+            <input type="submit" value="Submit Now"><br>
+            <input type="reset" value="Reset Now"> <br>
+            <!-- button tag . button tag can take three values under its type :
+             submit, reset, button. an advantage of using button tag ob=ver normal input type is that we can add img under under button tag.-->
+
+            <button type="button"> button 1 <img
+                    src="https://www.codingninjas.com/blog/wp-content/uploads/2020/04/LOGO-05.png" height="80"
+                    widht="130" alt=""> </button>
+        </div>
+    </form>
+</body>
+
+</html>

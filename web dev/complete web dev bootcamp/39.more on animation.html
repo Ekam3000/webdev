@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animations</title>
+    <head>
+         
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+    /> 
+
+      </head>
+    <style>
+      .one{
+          height:200px;
+          width:200px;
+          background-color:darkblue;
+          border:2px solid yellow;
+          margin:100px;
+      }
+      .two{
+          height:200px;
+          width:200px;
+          background-color:darkmagenta;
+          border:2px solid red;
+          margin:100px;
+      }
+      .myanimations {
+
+          animation-name: bounce,flash,jello;
+         animation-duration: 1s, 2s, 3s; 
+         animation-iteration-count:infinite, infinite ,infinite;
+         animation-fill-mode:alternate ,alternate ,alternate;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Use css instead of classes to do this. If you use classes the last will overwrite the other classes. -->
+    <div class="one animated myanimations">
+        
+    </div>
+    <div class="two animated bounce infinite delay-2s">
+
+    </div>
+</body>
+</html>

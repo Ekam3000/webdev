@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Height, width, borders and backgrounds </title>
+    <style>
+        #firstPara{
+            background-color: red;
+             height: 100px; 
+             width:455px; 
+             border: 4px solid green; 
+             /* these all three can be written in a single line as above */
+            /* border-width: 4px;
+            border-color: green;
+            border-style: solid;  */
+            border-radius: 11px;
+            border-width : 4px 6px 8px 3px;
+            /* border width: top right bottom left;  */
+        }
+
+        #secondPara{
+            background-color: rgb(58, 243, 98);
+            /* height that para covers  */
+            height: 100px;
+            /* width that para covers  */
+            width:455px; 
+             /* border -top :line width line style color   */
+            /* border-top: 2px solid rgb(231, 22, 231); */
+            /* border-right: 3px solid rgb(18, 10, 133);  */
+            /* border-bottom: 5px solid rgba(9, 144, 27, 0.774); */
+            border-left: 4px solid rgb(156, 42, 13);
+            /* border radius defines the curving nature of the edge  */
+            border-top-left-radius: 4px;
+            border-top-right-radius: 14px;  
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 24px;
+            /* border radius: 4px 14px 8px 24px';  */
+        }
+
+        #thirdPara{
+            height: 500px;
+            width:455px; 
+            background-image: url("https://img.xcitefun.net/users/2014/07/359035,xcitefun-sunset-beach-9.jpg");
+            border: 2px solid red;
+            background-repeat: no-repeat; /* repeat-x and repeat-y will make it repeat on x and y axis */
+            /* background-position: 192px 34px; 122px top ; 122 bottom; 122px center */
+            background-position: center center;
+            /* background-position: bottom right; */
+            /* background-position: top center; */ 
+            /* first one will be top ,bottom aur center ,  */
+            /* second one will be left right or center  */
+            /* for covering the entire container  */
+            background-size: cover;
+            /* if image is bigger then the container then apply contain  */
+            /* background-size: contain;  */
+            /* explicitly specifing dimentions  */
+            background-size: 200px 300px;
+            background-attachment: fixed;
+
+        }
+    </style>
+</head>
+<body>
+      <h3>This is heading</h3>
+    <p id="firstPara">This is a paragraph</p>
+
+    <h3>This is second heading</h3>
+    <p id="secondPara">This is my second paragraph</p>
+
+    <h3>This is third heading</h3>
+    <p id="thirdPara">This is my third paragraph</p>
+
+</body>
+</html>

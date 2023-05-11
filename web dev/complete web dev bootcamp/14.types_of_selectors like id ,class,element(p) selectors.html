@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Selectors</title>
+    <style>
+        /* comparison will takes place in between same tag element or class or id who is up or below in the styling sheet  */
+        /* and id ki jada chale gii yaha in comparison to class */
+        /* Element selector */
+        p{
+            border: 2px solid red;
+        }
+        
+        
+        /* Class selector */
+        .redElement{
+            background-color: crimson;
+        }
+        .bgBlue{
+            color: yellow;
+            background-color: blue;
+        }
+        /* Id selector */
+        #firstPara{
+            color: green;
+        }
+        #secondPara{
+            color: rgb(58, 189, 189);
+        }
+        
+        /* Grouping selector */
+        footer, span{
+            background-color: pink; 
+        }
+    </style>
+</head>
+<body>
+    <h3>CSS Selectors</h3>
+    <p id="firstPara" class ="redElement bgBlue">This is a simple paragraph to demonstrate css selectors</p>
+    <p id="secondPara" class="redElement bgBlue">This is a another simple paragraph to demonstrate css selectors</p>
+    <div>
+        <p>This is yet another simple paragraph inside div to demonstrate css selectors</p>
+        <span>this is span</span>
+    </div>
+    <footer>This is footer</footer>
+</body>
+</html>

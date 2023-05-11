@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css variables scope</title>
+    <style>
+        :root{
+            --text-color:red;
+        }
+        .container{
+            color:var(--text-color);
+            padding:1rem;
+            border:2px solid black;
+        }
+        .inner-div1{
+            /* parent value taken place by childerns also  */
+            --text-color:blue;
+            /* instead of two hifens we used one hifen what will be its value of text color of inner-div1 now  */
+            color:var(-text-color);
+            padding:1rem;
+            border:2px solid black;
+        }
+        .inner-div2{
+            color:var(--text-color);
+            padding:1rem;
+            border:2px solid black;
+            margin:0.2rem;
+        }
+        .inner-div3{
+            color:var(--text-color);
+            padding:1rem;
+            border:2px solid black;
+            margin:0.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>container div</p>
+        <div class="inner-div1">
+            <p>inner-div1</p>
+            <div class="inner-div2">
+                <p>inner-div2</p>
+            </div>
+            <div class="inner-div3">
+                <p>inner-div3</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

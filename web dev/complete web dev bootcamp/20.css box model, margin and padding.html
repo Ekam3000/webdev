@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box Model</title>
+    <style>
+         /* universal selector/ border-box */
+         /* Let us now understand a property called ‘Box sizing’. On giving width to the element and after that applying padding and border to the container, its width also changes(the width of the content box model(tht total width) part changes). If you want this not to happen then you can use the property of ‘box-sizing’. Now if you change the padding then it will adjust the width(in this case ur content part width will be adjusted) according to the padding. */
+         /* content box model  */
+         /* the actual height /width of the contanier/box = height /width of content + border+padding */ 
+         /* And margin is not the part of the element  */
+          /* in the presence of the bordeer box model  
+         for width 
+         cotent box model dimention- 533x200
+         contentbox dimention- 417x112
+         border padding content 
+          3       55      417
+          increment to padding by 5
+          contentbox dimention- 407x112
+         border padding content 
+          3       60      407
+         for height
+         cotent box model dimention- 533x200
+         contentbox dimention- 417x112
+         border padding content 
+          3       41     112
+          increment to padding by 5
+          contentbox dimention- 417x104
+         border padding content 
+          3       45     104
+        in the absence of the border box model 
+        for width 
+         cotent box model dimention- 649x288
+         contentbox dimention-533x200 
+         border padding content 
+          3       55      533
+          increment to padding by 5
+         content box model dimention- 659x288
+         border padding content 
+          3       60      533
+         for height
+         content box model dimention- 649x288
+         contentbox dimention- 533x200
+         border padding content 
+          3       41     288
+          increment to padding by 
+          content box model dimention- 649x296
+         border padding content 
+          3       45     296 */
+
+         * {
+            box-sizing: border-box;  
+            margin: 0;
+             /* by default padding and margin are 0  */
+             padding: 0;
+        }       
+         body{
+            background-color: #e6cbf8;
+        } 
+
+        .container{
+            background-color: rgb(185 182 214);
+            border: 3px solid rgb(64, 6, 119);
+        
+            
+            /* We can set margin/padding for  top, bottom, left and right like this */
+            /* padding-top: 79px;
+            padding-bottom: 79px;
+            padding-left: 34px; 
+            padding-right: 79px;*/
+            /* Margin- It clears an area outside the border. The margin is also transparent.  */
+            /* margin-top: 3px;
+            margin-bottom: 5px;
+            margin-left: 34px;
+            margin-right:5px ; */
+            
+            /* margin = top right bottom left;  */
+            /* padding = top right bottom left;  */
+            
+            /* padding: 23px 56px 6px 78px;    */
+            /* margin: 23px 56px 6px 78px;   */
+            
+            /* padding: y(top/bottom) x(left/right); */
+            /* margin: y(top/bottom) x(left/right); */
+              padding: 41px 55px; 
+            /* margin: 14px 19px;  */
+            border-radius: 23px;
+            /* 533px is the width of the content part in the absence of the border-box but it will be 417 px of the content part in the presence of the border-box  */
+            width: 533px; 
+            margin:38px auto;
+            height: 200px;
+
+        }
+        .container1{
+            background-color: rgb(185 182 214);
+            border: 3px solid rgb(64, 6, 119);
+            border-radius: 23px;
+            height:200px;
+            /* here if u will not specify the width then the class container1 will takes up the entire space and there will be no benefit of writing margin auto  */
+            margin:19px auto;
+            /* 533px is the width of the content part in the absence of the border-box but it will be 417 px of the content part in the presence of the border-box  */
+            width: 533px; 
+            /* here one imp point  */
+            /* there the vertical margin should be 38+19=58 but it is 38 only . so conclusion vertical margin will takes up only the max value of the two given quantity  */ 
+            /* but it is not the case with horizontal margins . horizontal margin will be the sum of two given quantity  */
+        }
+        #firstPara{
+         color: #3bd216;
+        }  
+        #secondPara{
+        color: rgb(64, 6, 119);
+        }
+        #thirdPara{
+        color: rgb(22, 154, 194);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3 id="firstPara">This is my heading</h3>
+        <p id="first">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt harum quis, quibusdam, minima molestiae tempore vel magni, repellendus doloribus debitis rerum tenetur eveniet.</p>
+    </div>
+
+    <div class="container">
+        <h3 id="secondPara">This is my heading</h3>
+        <p id="second">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt harum quis, quibusdam, minima molestiae tempore vel magni, repellendus doloribus debitis rerum tenetur eveniet.</p>
+    </div>
+
+    <div class="container1">
+        <h3 id="thirdPara">This is my heading</h3>
+        <p id="third">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt harum quis, quibusdam, minima molestiae tempore vel magni, repellendus doloribus debitis rerum tenetur eveniet.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo elements</title>
+    <style>
+          /* p::first-letter{
+         font-size:2rem;
+         font-weight:bold;
+         text-transform: uppercase;
+        }   */
+        /* .pseudo-effect::first-line{
+            font-size:2rem;
+         font-weight:bold;
+         text-transform: uppercase;
+        } */
+        /* before and after pseudo elements */
+         p::before{
+            content:"before";
+            font-size:2rem;
+         font-weight:bold;
+         text-transform: uppercase;
+        }
+        /* p::after{
+            content:"after";
+            font-size:2rem;
+         font-weight:bold;
+         text-transform: uppercase;
+        }
+          */
+          /* adding an icon  */
+          /* whatever element we are adding bcoz of after is inline so background img is inline .in order to make visible the back-img we have give dimentions and hence making firstly its display:inline-block  */
+        p::after{
+            content:"";
+            display:inline-block;
+            height:40px;
+            width:40px;
+            background-image: url("./author-pic.png");
+            font-size:2rem;
+            font-weight:bold;
+            text-transform: uppercase;
+        }
+         .quotes::before{
+             content:"''";
+         }
+         .quotes::after{
+             content:"''";
+         }
+         ul{
+            list-style: none;
+         }
+        li::before{
+            content:"";
+            background-image: url("./author-pic.png");
+            display:inline-block;
+            height:20px;
+            width:20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p class="pseudo-effect"> this is first line </p>
+    <p>this is second line</p> -->
+    <p> &nbsp  &nbsp  &nbsp heading  &nbsp  &nbsp  &nbsp</p>
+    <span class="quotes">web dev op</span>
+    <ul>
+        <li>list item</li>
+        <li>list item</li>
+        <li>list item</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Transform</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            height: 80vh;
+            background-color: burlywood;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color:  brown;
+            border: 2px solid black;
+            border-radius: 8px;
+            height: 400px;
+            width: 400px;
+            /* transform: rotate(45deg); */
+            /* or simply u can apply the all properties together  */
+             transition: all 0.5s ease-in-out 1s;  
+             /* here all implies the properties which are mentioned bolow in hover section */
+             /* 1s indicating delay in transition to occur  */
+            /* ease-in-out-> transition biginning and transition end both r smooth  */
+            /* for particular property  */
+            /* transition: height 0.5s ease-in-out; */
+
+            /* steps in transition  */
+            transition: 1s steps(4, end);
+        } 
+        .box:hover{
+            height:800px;
+            /* transform: rotate(360deg); */
+            /* transform: rotateX(-120deg); */
+            /* transform: rotateY(60deg); */
+            /* transform: skew(40deg); */
+             transform: scale(2); 
+             /* transform: scale(X,Y);  */
+             /* transform: scale(2,4);  */
+            /* transform: translateX(123px); */
+            /* transform: translateY(123px); */
+            /* transform: translate(123px, 123px);  */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">This is a box</div>
+    </div>
+</body>
+</html>
